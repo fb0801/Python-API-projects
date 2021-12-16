@@ -1,6 +1,12 @@
+#modules to use
 import tkinter as tk
 import requests
 import time
+
+
+def getWeather():
+    city = textfield.get()
+    api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
 
 canvas.tk.Tk()
