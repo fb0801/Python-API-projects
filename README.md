@@ -6,4 +6,6 @@ Different projects where we have used API's with python
 
 
 <h3>Resources used: </h3>
-
+<ul>
+  <li>https://openweathermap.org/current</li>
+</ul>
