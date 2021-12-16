@@ -6,7 +6,7 @@ import time
 
 def getWeather():
     city = textfield.get()
-    api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    json_data= requests.get()
 
 
 canvas.tk.Tk()
