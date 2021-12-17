@@ -8,8 +8,10 @@ import time
 def getWeather():
     city = textfield.get()
     json_data= requests.get(api).json()
-    condition = json_data['weather'[0]['main']
-    temp = json['main']['temp']
+    condition = json_data['weather'][0]['main']
+    temp = int(json['main']['temp'] - 273.15)
+    temp = int(json['main']['temp'] - 273.15)
+    temp = int(json['main']['temp'] - 273.15)
 
 
 canvas.tk.Tk()
