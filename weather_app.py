@@ -9,6 +9,7 @@ def getWeather():
     city = textfield.get()
     json_data= requests.get(api).json()
     condition = json_data['weather'[0]['main']
+    temp = json['main']['temp']
 
 
 canvas.tk.Tk()
