@@ -20,7 +20,8 @@ def getWeather():
 
 
     final_info = condition + '\n' + str(temp) + "°C"
-
+    final_data = '\n' + "Max Temp: " + str(max_temp) + '\n' + 'Min Temp: ' + str(min_temp) + '\n' + 'Pressure: ' + str(pressure) + '\n' + 'Humidity: ' + str(humidity) + '\n' + "Wind speed: " + str(wind) + '\n' + "sunrise:" + sunrise + '\n' + "Sunset: " + sunset 
+    label1.config()
     
 canvas.tk.Tk()
 canvas.geomerty("600x500")
