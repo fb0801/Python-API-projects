@@ -19,6 +19,9 @@ def getWeather():
     sunset = time.strfime("%I%M%S", time.gmtime(json_data['sys']['sunset']))
 
 
+    final_info = condition + '\n' + str(temp) + "°C"
+
+    
 canvas.tk.Tk()
 canvas.geomerty("600x500")
 canvas.title('Weather app')
