@@ -15,7 +15,8 @@ def getWeather():
     pressure = json_data['main']['pressure']
     humidity = json_data['main']['humidity']
     wind = json_data['wind']['speed']
-    
+    sunrise = time.strfime("%I%M%S", time.gmtime(json_data['sys']['sunrise']))
+    sunset = time.strfime("%I%M%S", time.gmtime(json_data['sys']['sunset']))
 
 
 canvas.tk.Tk()
