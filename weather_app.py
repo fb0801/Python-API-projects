@@ -26,7 +26,7 @@ def getWeather(canvas):
     labal2.config(text = final_data)
     
 canvas=tk.Tk()
-canvas.geomerty("600x500")
+canvas.geometry("600x500")
 canvas.title('Weather app')
 
 f=("poppins", 15, "bold")
