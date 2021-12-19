@@ -1,5 +1,5 @@
 #modules to use
-import weatherConfig
+#import weatherConfig
 import tkinter as tk
 import requests
 import time
@@ -7,6 +7,7 @@ import time
 
 def getWeather(canvas):
     city = textfield.get()
+    
     json_data= requests.get(api).json()
     condition = json_data['weather'][0]['main']
     temp = int(json_data['main']['temp'] - 273.15)
@@ -24,7 +25,7 @@ def getWeather(canvas):
     label1.config(text = final_info)
     labal2.config(text = final_data)
     
-canvas.tk.Tk()
+canvas=tk.Tk()
 canvas.geomerty("600x500")
 canvas.title('Weather app')
 
