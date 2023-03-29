@@ -14,4 +14,6 @@ Different projects where we have used API's with python
   <li>https://stackoverflow.com/questions/56995350/best-practices-python-where-to-store-api-keys-tokens </li>
 <li>  https://www.youtube.com/watch?v=Sz0_2fp27Q0&list=PLVE5czp3KIIzqqZlsu-RSAUGgErJ6XrmE</li> 
 <li>https://www.youtube.com/watch?v=tLKKmouUams</li>
+<li>https://api.stackexchange.com/docs/questions#order=desc&sort=activity&filter=default&site=stackoverflow&run=true</li>
+<li>https://www.youtube.com/watch?v=qbLc5a9jdXo</li>
 </ul>
