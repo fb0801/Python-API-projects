@@ -36,9 +36,10 @@ resource_feilds= {
 class Video(Resource):
     @marshal_with(resource_feilds)
     def get(self, video_id):
-        result = VideoModel.query.get(id=video_id)
-        return 
+        result = VideoModel.query.filter_by(id=video_id).first()
+        return result
     
+    @marshal_with(resource_feilds)
     def put(self,video_id):
         args= video_put_args.parse_args()
         video = VideoModel(id=video_id, name=args['name'], views=args['views'], likes = args['likes'])
