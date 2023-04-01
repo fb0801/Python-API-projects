@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy, Model
 import requests
-from flask_restful import Api, Resource, reqparse, abort
+from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
 
 app = Flask(__name__)
 api = Api(app)
@@ -27,22 +27,23 @@ video_put_args.add_argument('views', type=int, help="video views", required=True
 video_put_args.add_argument('like', type=int, help="video likes", required=True)
 videos ={}
 
-def abort_video(video_id):
-    if video_id not in videos:
-        abort("Video id not valid...")
-
-def abort_video_if_exist(video_id):
-    if video_id in videos:
-        abort("Video id not valid...")
-
+resource_feilds= {
+    'id': fields.Integer,
+    'name':fields.string,
+    "views":fields.Integer,
+    'likes':fields.Integer
+}
 class Video(Resource):
+    @marshal_with(resource_feilds)
     def get(self, video_id):
-        abort_video(video_id)
-    abort_video()
+        result = VideoModel.query.get(id=video_id)
+        return 
     
     def put(self,video_id):
         args= video_put_args.parse_args()
-        videos[video_id] = args
+        video = VideoModel(id=video_id, name=args['name'], views=args['views'], likes = args['likes'])
+        db.session.add(video)
+        db.session.commit()
         return videos[video_id]
     
     def delete(self, video_id):
