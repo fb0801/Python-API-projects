@@ -16,4 +16,6 @@ Different projects where we have used API's with python
 <li>https://www.youtube.com/watch?v=tLKKmouUams</li>
 <li>https://api.stackexchange.com/docs/questions#order=desc&sort=activity&filter=default&site=stackoverflow&run=true</li>
 <li>https://www.youtube.com/watch?v=qbLc5a9jdXo</li>
+<li>https://flask-restful.readthedocs.io/en/latest/index.html</li>
+<li>https://www.youtube.com/watch?v=GMppyAPbLYk</li>
 </ul>
